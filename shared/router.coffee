@@ -3,11 +3,16 @@ Router.map ->
   @route "entrySignIn",
     path: "/sign-in"
     onBeforeAction: ->
+      if Accounts.userId()
+        Router.go AccountsEntry.settings.dashboardRoute
       Session.set('entryError', undefined)
       Session.set('buttonText', 'in')
       @next()
     onRun: ->
-      if Meteor.user()
+      console.log "check data user"
+      console.log Accounts.userId()
+
+      if Accounts.userId()
         Router.go AccountsEntry.settings.dashboardRoute
 
       if AccountsEntry.settings.signInTemplate
@@ -29,7 +34,6 @@ Router.map ->
         Template[@template].events(AccountsEntry.entrySignInEvents)
         Template[@template].helpers(AccountsEntry.entrySignInHelpers)
       @next()
-
 
   @route "entrySignUp",
     path: "/sign-up"

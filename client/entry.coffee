@@ -1,8 +1,8 @@
 AccountsEntry =
   settings:
     wrapLinks: true
+    dashboardRoute: '/picker'
     homeRoute: '/'
-    dashboardRoute: '/dashboard'
     passwordSignupFields: 'EMAIL_ONLY'
     emailToLower: true
     usernameToLower: false
