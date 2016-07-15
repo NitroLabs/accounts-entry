@@ -9,9 +9,6 @@ Router.map ->
       Session.set('buttonText', 'in')
       @next()
     onRun: ->
-      console.log "check data user"
-      console.log Accounts.userId()
-
       if Accounts.userId()
         Router.go AccountsEntry.settings.dashboardRoute
 
