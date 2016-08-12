@@ -4,98 +4,97 @@
       <div class="{{rowCSSClass}}">
         {{#if logo}}
           <div class="entry-logo">
-              <a href="/"><img src="{{logo}}" alt="logo"></a>
+            <a href="/"><img src="{{logo}}" alt="logo"></a>
           </div>
         {{/if}}
-          <div class="col-md-12">
-            <div class="header-signin">
-              <h1>Register</h1>
-              <p>just take 1 min to get all features of lumin</p>
-            </div>
+        <div class="col-md-12">
+          <div class="header-signin">
+            <h1>Register</h1>
+            <p>just take 1 min to get all features of lumin</p>
           </div>
+        </div>
         <div class="entry col-md-12">
           <div class="row">
             <div class="col-md-6">
               {{#if passwordLoginService}}
-              <h3>By your email:</h3>
-              {{> entryError}}
-              <form class="entry-form" id='signUp'>
-                {{> entryExtraSignUpFields}}
-                {{#if showUsername}}
-                  <div class="form-group">
-                    <label>{{t9n "username"}}</label>
-                    <input autofocus name="username" type="string" class="form-control" value=''  autocapitalize="none" autocomplete="off" autocorrect="off">
-                  </div>
-                {{/if}}
-                {{#if showEmail}}
-                  <div class="form-group">
-                    <label>Your email address:</label>
-                    {{#if showUsername}}
-                      <input type="email" class="form-control" value='{{emailAddress}}'  autocapitalize="none" autocomplete="off" autocorrect="off">
-                    {{else}}
-                      <input autofocus type="email" class="form-control" value='{{emailAddress}}'  autocapitalize="none" autocomplete="off" autocorrect="off" >
-                    {{/if}}
-                  </div>
-                {{/if}}
+                <h3>By your email:</h3>
+                {{> entryError}}
+                <form class="entry-form" id='signUp'>
+                  {{> entryExtraSignUpFields}}
+                  {{#if showUsername}}
+                    <div class="form-group">
+                      <label>{{t9n "username"}}</label>
+                      <input autofocus name="username" type="string" class="form-control" value=''  autocapitalize="none" autocomplete="off" autocorrect="off">
+                    </div>
+                  {{/if}}
+                  {{#if showEmail}}
+                    <div class="form-group">
+                      <label>Your email address:</label>
+                      {{#if showUsername}}
+                        <input type="email" class="form-control" value='{{emailAddress}}'  autocapitalize="none" autocomplete="off" autocorrect="off">
+                      {{else}}
+                        <input autofocus type="email" class="form-control" value='{{emailAddress}}'  autocapitalize="none" autocomplete="off" autocorrect="off" >
+                      {{/if}}
+                    </div>
+                  {{/if}}
 
-                <div class="form-group">
-                  <label>Password:</label>
-                  <input type="password" class="form-control" value=''>
-                </div>
-
-                {{#if showSignupCode}}
                   <div class="form-group">
-                    <label>{{t9n "signupCode"}}</label>
-                    <input name="signupCode" type="string" class="form-control" value=''  autocapitalize="none" autocomplete="off" autocorrect="off" >
+                    <label>Password:</label>
+                    <input type="password" class="form-control" value=''>
                   </div>
-                {{/if}}
-                <div class="row">
-                  <div class="col-md-4">
-                    <button type="submit" class="submit btn btn-block btn-default">Register</button>
-                  </div>
-                  <div class="col-md-8">
-                    <i class="icon-right"></i>
-                    <div class="forgot">
-                      <p class="entry-signin-cta">Already have account?</p>
-                      <a href="{{pathFor 'entrySignIn'}}">Login here</a>
+
+                  {{#if showSignupCode}}
+                    <div class="form-group">
+                      <label>{{t9n "signupCode"}}</label>
+                      <input name="signupCode" type="string" class="form-control" value=''  autocapitalize="none" autocomplete="off" autocorrect="off" >
+                    </div>
+                  {{/if}}
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button type="submit" class="submit btn btn-block btn-default">Register</button>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="forgot">
+                        <p class="entry-signin-cta"><i class="icon-right"></i>Already have account?</p>
+                        <a class="dsv-custom-entrySignIn" href="{{pathFor 'entrySignIn'}}">Login here</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
-            {{/if}}
+                </form>
+              {{/if}}
             </div>
             <div class="col-md-6 entry-social">
               {{#if otherLoginServices}}
-              <h3>Register with:</h3>
-              <p class="entry-signin-cta" style="display:none">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="{{pathFor 'entrySignIn'}}">{{t9n "signin"}}</a>.</p>
-              {{#each loginServices}}
-                {{> entrySocial}}
-              {{/each}}
-              {{#if passwordLoginService}}
-                <div class="email-option">
-                  <!-- <strong class="line-thru">{{t9n "OR"}}</strong> -->
-                  <!-- <a data-toggle="collapse" href="#signUp">
+                <h3>Register with:</h3>
+                <p class="entry-signin-cta" style="display:none">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="{{pathFor 'entrySignIn'}}">{{t9n "signin"}}</a>.</p>
+                {{#each loginServices}}
+                  {{> entrySocial}}
+                {{/each}}
+                {{#if passwordLoginService}}
+                  <div class="email-option">
+                    <!-- <strong class="line-thru">{{t9n "OR"}}</strong> -->
+                    <!-- <a data-toggle="collapse" href="#signUp">
                     {{t9n "signUpWithYourEmailAddress"}}
                   </a> -->
-                </div>
-              {{/if}}
-            {{else}}
+                  </div>
+                {{/if}}
+              {{else}}
                 <p class="entry-signin-cta" style="display:none">{{t9n "ifYouAlreadyHaveAnAccount"}} <a href="{{pathFor 'entrySignIn'}}">{{t9n "signin"}}</a>.</p>
-            {{/if}}
+              {{/if}}
 
-            {{#if both}}
-              <p class="entry-agreement">{{t9n "clickAgree"}}
-                <a href="{{privacyUrl}}">{{t9n "privacyPolicy"}}</a> {{t9n "and"}}
-                <a href="{{termsUrl}}">{{t9n "terms"}}</a>.
-              </p>
-            {{else}}
-              {{#unless neither}}
+              {{#if both}}
                 <p class="entry-agreement">{{t9n "clickAgree"}}
-                  {{#if privacyUrl}}<a href="{{privacyUrl}}">{{t9n "privacyPolicy"}}</a>.{{/if}}
-                  {{#if termsUrl}}<a href="{{termsUrl}}">{{t9n "terms"}}</a>.{{/if}}
+                  <a href="{{privacyUrl}}">{{t9n "privacyPolicy"}}</a> {{t9n "and"}}
+                  <a href="{{termsUrl}}">{{t9n "terms"}}</a>.
                 </p>
-              {{/unless}}
-            {{/if}}
+              {{else}}
+                {{#unless neither}}
+                  <p class="entry-agreement">{{t9n "clickAgree"}}
+                    {{#if privacyUrl}}<a href="{{privacyUrl}}">{{t9n "privacyPolicy"}}</a>.{{/if}}
+                    {{#if termsUrl}}<a href="{{termsUrl}}">{{t9n "terms"}}</a>.{{/if}}
+                  </p>
+                {{/unless}}
+              {{/if}}
             </div>
           </div>
         </div>
