@@ -10,7 +10,7 @@
         <div class="col-md-12">
           <div class="header-signin">
             <h1>Login</h1>
-            <p>Take 1 minute to get full access to Lumin PDF</p>
+            <!-- <p>Take 1 minute to get full access to Lumin PDF</p> -->
           </div>
         </div>
         <div class="entry col-md-12">
@@ -38,12 +38,12 @@
                     </div>
                     <div class="col-md-8">
                       <div class="forgot">
-                        <a href="{{pathFor 'entryForgotPassword'}}"><i class="icon-right"></i><span>Forgot ID/PW?</span></a>
+                        <a href="{{pathFor 'entryForgotPassword'}}"><i class="icon-right"></i><span>Forgot password?</span></a>
                         {{#if showCreateAccountLink}}
                         <a href="{{pathFor 'entrySignUp'}}"><i class="icon-right"></i><span>Register new account</span></a>
                         {{/if}}
                       </div>
-                    </div> 
+                    </div>
                   </div>
                   {{/unless}}
                 </form>
@@ -55,7 +55,7 @@
                 <h3>Log in with:</h3>
                 {{#each loginServices}}
                   {{> entrySocial}}
-                {{/each}}  
+                {{/each}}
               </div>
             {{/if}}
             {{#unless otherLoginServices}}
