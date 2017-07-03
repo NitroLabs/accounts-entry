@@ -37,7 +37,7 @@ en =
     emailRequired: "Email is required."
     signupCodeRequired: "Registration code is required."
     signupCodeIncorrect: "Registration code is incorrect."
-    signupEmailDuplicated: "Registration email has been taken already."
+    signupEmailDuplicated: "Registration email has been taken already. Please try to log in again."
     signInRequired: "You must be signed in to do that."
     usernameIsEmail: "Username cannot be an email address."
 

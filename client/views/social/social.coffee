@@ -35,6 +35,8 @@ Template.entrySocial.events
           Router.go AccountsEntry.settings.dashboardRoute
       else if (err instanceof Accounts.LoginCancelledError)
         # do nothing
+      else if (err.error == 400 && err.reason == 'Duplicated register email.')
+        Session.set 'entryError', t9n("error.signupEmailDuplicated")
       else if (err instanceof ServiceConfiguration.ConfigError)
         Accounts._loginButtonsSession.configureService(serviceName)
       else
