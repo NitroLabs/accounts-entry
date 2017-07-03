@@ -153,25 +153,32 @@ AccountsEntry.entrySignUpEvents = {
           email: email
           password: AccountsEntry.hashPassword(password)
           profile: filteredExtraFields
-        Meteor.call 'entryCreateUser', newUserData, (err, data) ->
-          if err
-            console.log err
-            T9NHelper.accountsError err
+
+        Meteor.call 'validateDuplicatedEmail', newUserData, (err2, valid2) ->
+          if valid2
+            Meteor.call 'entryCreateUser', newUserData, (err, data) ->
+              if err
+                console.log err
+                T9NHelper.accountsError err
+                return
+              #login on client
+              isEmailSignUp = _.contains([
+                'USERNAME_AND_EMAIL',
+                'EMAIL_ONLY'], AccountsEntry.settings.passwordSignupFields)
+              userCredential = if isEmailSignUp then email else username
+              Meteor.loginWithPassword userCredential, password, (error) ->
+                if error
+                  console.log error
+                  T9NHelper.accountsError error
+                else if Session.get 'fromWhere'
+                  Router.go Session.get('fromWhere')
+                  Session.set 'fromWhere', undefined
+                else
+                  Router.go AccountsEntry.settings.dashboardRoute
+          else
+            console.log err2
+            Session.set 'entryError', t9n("error.signupEmailDuplicated")
             return
-          #login on client
-          isEmailSignUp = _.contains([
-            'USERNAME_AND_EMAIL',
-            'EMAIL_ONLY'], AccountsEntry.settings.passwordSignupFields)
-          userCredential = if isEmailSignUp then email else username
-          Meteor.loginWithPassword userCredential, password, (error) ->
-            if error
-              console.log error
-              T9NHelper.accountsError error
-            else if Session.get 'fromWhere'
-              Router.go Session.get('fromWhere')
-              Session.set 'fromWhere', undefined
-            else
-              Router.go AccountsEntry.settings.dashboardRoute
       else
         console.log err
         Session.set 'entryError', t9n("error.signupCodeIncorrect")

@@ -37,6 +37,7 @@ he =
     emailRequired: "חובה להזין Email."
     signupCodeRequired: "חובה להזין קוד הרשמה."
     signupCodeIncorrect: "קוד ההרשמה שגוי."
+    signupEmailDuplicated: 'דוא"ל ההרשמה כבר נלקח.'
     signInRequired: "אין לך רשות לבצע פעולה זאת."
     usernameIsEmail: "שם המשתמש לא יכול להיות כתובת Email."
 

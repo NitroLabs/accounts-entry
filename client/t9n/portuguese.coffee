@@ -37,6 +37,7 @@ pt =
     emailRequired: "E-mail é obrigatório."
     signupCodeRequired: "É necessário um código de acesso."
     signupCodeIncorrect: "Código de acesso incorreto."
+    signupEmailDuplicated: "O e-mail de registro já foi feito."
     signInRequired: "Você precisa estar logado para fazer isso."
     usernameIsEmail: "Nome de usuário não pode ser um endereço de e-mail."
 

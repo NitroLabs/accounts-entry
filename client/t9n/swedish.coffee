@@ -37,6 +37,7 @@ sv =
     emailRequired: "Det krävs ett lösenord."
     signupCodeRequired: "Det krävs en registreringskod."
     signupCodeIncorrect: "Registreringskoden är felaktig."
+    signupEmailDuplicated: "Registrerings e-post har redan tagits."
     signInRequired: "Inloggning krävs här."
     usernameIsEmail: "Användarnamnet kan inte vara en e-postadress."
 

@@ -34,6 +34,7 @@ es =
     emailRequired: "Email es necesario."
     signupCodeRequired: "Código para suscribir es necesario."
     signupCodeIncorrect: "Código para suscribir no coincide."
+    signupEmailDuplicated: "El correo electrónico de registro ya se ha tomado."
     signInRequired: "Debes iniciar sesión para hacer eso."
     usernameIsEmail: "Usuario no puede ser Email."
 

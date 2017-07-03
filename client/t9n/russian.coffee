@@ -37,6 +37,7 @@ ru =
     emailRequired: "Email обязательно."
     signupCodeRequired: "Необходим регистрациооный код."
     signupCodeIncorrect: "Неправильный регистрационный код."
+    signupEmailDuplicated: "Регистрация электронной почты уже сделана."
     signInRequired: "Необходимо войти для чтобы продолжить."
     usernameIsEmail: "Имя пользователя не может быть адресом email."
 

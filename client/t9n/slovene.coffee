@@ -31,7 +31,7 @@ sl =
   "Incorrect password": "Napačno geslo"
   "Email already exists.": "Email že obstaja."
   "Email is required": "Email je obvezen podatek"
-  
+
   error:
     minChar: "Geslo mora imeti vsaj sedem znakov."
     pwOneLetter: "V geslu mora biti vsaj ena črka."
@@ -40,7 +40,8 @@ sl =
     emailRequired: "Email je obvezen vnos."
     signupCodeRequired: "Prijavna koda je obvezen vnos."
     signupCodeIncorrect: "Prijavna koda je napačna."
+    signupEmailDuplicated: "Registracija e-pošte je že vzeta."
     signInRequired: "Za to moraš biti prijavljen(a)."
     usernameIsEmail: "Uporabniško ime ne more biti email naslov."
-    
+
 T9n.map "sl", sl

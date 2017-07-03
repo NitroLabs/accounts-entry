@@ -31,3 +31,14 @@ Meteor.startup ->
           profile: _.extend(profile, user.profile)
       if (user.email && Accounts._options.sendVerificationEmail)
         Accounts.sendVerificationEmail(userId, user.email)
+
+    validateDuplicatedEmail: (user) ->
+      check user, Object
+      numberOfDuplicatedUser = Meteor.users.find({
+              'registered_emails': {
+                $elemMatch: {
+                  address: user.email
+                }
+              }
+            }).count()
+      not (numberOfDuplicatedUser > 0)

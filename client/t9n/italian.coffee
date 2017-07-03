@@ -37,6 +37,7 @@ it =
     emailRequired: "L'Email è obbligatoria."
     signupCodeRequired: "Il Codice di Registrazione è obbligatorio."
     signupCodeIncorrect: "Codice di Registrazione errato."
+    signupEmailDuplicated: "E-mail di registrazione è già stata eseguita."
     signInRequired: "Per fare questo devi accedere."
     usernameIsEmail: "Il Nome Utente non può essere un indirizzo email."
 

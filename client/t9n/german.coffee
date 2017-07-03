@@ -35,6 +35,7 @@ de =
     emailRequired: "E-Mail benötigt."
     signupCodeRequired: "Registrierungscode benötigt."
     signupCodeIncorrect: "Registrierungscode ungültig."
+    signupEmailDuplicated: "Registrierungs-E-Mail wurde bereits getroffen."
     signInRequired: "Sie müssen sich anmelden."
     usernameIsEmail: "Benutzername kann nicht eine E-Mail."
 

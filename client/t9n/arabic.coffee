@@ -37,6 +37,7 @@ ar =
     emailRequired: "البريد الالكترونى مطلوب"
     signupCodeRequired: "رمز التسجيل مطلوب"
     signupCodeIncorrect: "رمز التسجيل غير صحيح"
+    signupEmailDuplicated: "تم تسجيل البريد الإلكتروني المسجل بالفعل."
     signInRequired: "عليك بتسجبل الدخول لفعل ذلك"
     usernameIsEmail: "اسم المستخدم لا يمكن ان يكون بريد الكترونى"
 

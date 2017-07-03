@@ -35,6 +35,7 @@ pl =
     emailRequired: "Wymagany jest adres email."
     signupCodeRequired: "Wymagany jest kod rejestracji."
     signupCodeIncorrect: "Kod rejestracji jest nieprawidłowy."
+    signupEmailDuplicated: "Wysłano e-mailem rejestracyjne."
     signInRequired: "Musisz być zalogowany, aby to zrobić."
     usernameIsEmail: "Nazwa użytkownika nie może być adres e-mail."
 

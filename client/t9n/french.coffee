@@ -35,6 +35,7 @@ fr =
     emailRequired: "Un email est requis."
     signupCodeRequired: "Un code d'inscription est requis."
     signupCodeIncorrect: "Le code d'enregistrement est incorrect."
+    signupEmailDuplicated: "Le courrier électronique d'inscription a déjà été pris."
     signInRequired: "Vous devez être connecté pour continuer."
     usernameIsEmail: "Le nom d'utilisateur ne peut être le même que l'adresse email."
 
